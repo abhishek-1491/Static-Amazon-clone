@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping site in India:Shop onilne for Mobile, Cloth </title>
+    <!-- <link rel="stylesheet" href="new.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/35821647e0.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0%;
+            padding: 0%;
+            /* background-color: aqua; */
+            /* scrollbar-width: none; */
+        }
+
+        .header {
+            width: 100%;
+            height: 13vh;
+            background-color: #232F3E;
+            color: white;
+            position: relative;
+        }
+
+        .main-nav {
+            width: 100%;
+            height: 8vh;
+            background-color: #131A22;
+            position: fixed;
+            top: 0;
+            z-index: 2;
+            /* display: none; */
+
+        }
+
+        .sub-nav {
+            /* border: 1px solid; */
+            position: absolute;
+            margin-top: 63px;
+            width: 100%;
+            /* padding-top: 10px; */
+        }
+
+        .row {
+            float: left;
+        }
+
+        .first {
+
+            width: 21%;
+            height: 100%;
+            margin-left: 1px;
+            padding-left: 18px;
+            /* border: 1px solid; */
+            /* padding-left: 3px; */
+            /* background-color: red; */
+        }
+
+        .second {
+            width: 51%;
+            height: 100%;
+            padding-left: 10px;
+            margin-left: 20px;
+            /* background-color: blueviolet; */
+        }
+
+        .third {
+            width: 26%;
+            height: 100%;
+            margin-left: 13px;
+            /* background-color: red; */
+        }
+
+        .logo {
+            width: 39%;
+            height: 90%;
+            margin-top: 2px;
+
+        }
+
+        .logo img {
+            width: 110px;
+            margin: 3px;
+            margin-left: 7px;
+        }
+
+        .logo:hover {
+            border: 1px solid;
+        }
+
+        .location {
+            width: 56%;
+            height: 90%;
+            margin-top: 2px;
+            margin-left: 30px;
+            padding-left: 10px;
+            /* border: 1px solid; */
+            /* background-color: aqua; */
+        }
+
+        .location:hover {
+            border: 1px solid;
+        }
+
+        .location i {
+            margin-top: 20px;
+            padding-left: 10px;
+        }
+
+        .location .address {
+            margin-top: 12px;
+            padding-left: 27px;
+            font-size: 15px;
+        }
+
+        .current-address {
+            opacity: 0.6;
+            font-size: small;
+        }
+
+        .category {
+            width: 7%;
+            height: 67%;
+            margin-top: 10px;
+            margin-left: 0px;
+
+            /* background-color: red; */
+            select {
+                height: 88%;
+                width: 100%;
+                text-align: center;
+                background-color: cyan;
+                color: #131A22;
+                border: none;
+                border-radius: 5px 0px 0px 5px;
+            }
+        }
+
+        .category select:hover {
+            background-color: skyblue;
+        }
+
+        .search-bar {
+            /* background-color: yellow; */
+            width: 86%;
+            height: 70%;
+            margin-top: 10px;
+            margin-left: 15px;
+
+            input {
+                height: 85%;
+                width: 100%;
+                border: none;
+                padding-left: 10px;
+                /* font-weight: bold; */
+                font-size: 15px;
+
+            }
+        }
+
+        .search-btn {
+            background-color: #f2ac50;
+            width: 6%;
+            margin-left: 5px;
+            margin-top: 9.9px;
+            height: 60%;
+            text-align: center;
+            border-radius: 0px 5px 5px 0px;
+
+            i {
+                margin-top: 12px;
+                scale: 1.3;
+                color: #131A22;
+            }
+        }
+
+        .search-btn:hover {
+            background-color: #cb862b;
+        }
+
+        .language {
+            width: 21%;
+            height: 90%;
+            margin-top: 2px;
+            margin-left: 1px;
+            padding-left: 10px;
+            /* background-color: blue; */
+
+            img {
+                width: 20px;
+                height: 20px;
+                margin-top: 23px;
+                margin-left: 1px;
+            }
+
+            select {
+                width: 43px;
+                height: 27px;
+                background-color: #131A22;
+                color: white;
+                margin-top: 18px;
+                margin-left: 30px;
+                font-size: 15px;
+                text-shadow: 0px 0px 1px white;
+                border: none;
+                /* margin-left: 20px; */
+            }
+        }
+
+        .language:hover {
+            border: 1px solid;
+        }
+
+        .account {
+            width: 33%;
+            height: 90%;
+            margin-top: 2px;
+            margin-left: 20px;
+
+            /* margin-bottom: 3px; */
+            /* background-color: yellow; */
+            div {
+                margin-left: 10px;
+            }
+
+        }
+
+        .account:hover {
+            border: 1px solid;
+        }
+
+        #name {
+            font-size: 12px;
+            margin-top: 15px;
+        }
+
+        .orders {
+            width: 20%;
+            height: 90%;
+            margin-top: 2px;
+            margin-left: 20px;
+
+            /* background-color: blue; */
+            div {
+                margin-left: 5px;
+            }
+        }
+
+        .orders:hover {
+            border: 1px solid;
+        }
+
+        .cart {
+            width: 24%;
+            height: 90%;
+            margin-top: 2px;
+            margin-left: 15px;
+            padding-left: 20px;
+
+            div i {
+                font-size: 35px;
+                margin-top: 10px;
+                margin-left: 5px;
+            }
+
+            #cart {
+                font-weight: bold;
+                margin-top: 25px;
+                margin-left: 20px;
+            }
+        }
+
+        .cart:hover {
+            border: 1px solid;
+        }
+
+
+        /* Main Nav Bar END */
+
+
+        /* Sub Nav Bar Start */
+
+
+        .sub-nav li {
+            display: inline-block;
+            text-align: center;
+            padding: 8px;
+            padding-bottom: 0px;
+
+            height: 4.3vh;
+            width: auto;
+            /* font-size: 17px; */
+        }
+
+        .sub-nav li:hover {
+            border: 1px solid;
+
+        }
+
+        /* .back{
+            border: 2px solid;
+            
+        } */
+        .container {
+            width: 100%;
+            margin: 0%;
+            padding: 0%;
+            z-index: -1;
+            /* display: none; */
+
+        }
+
+        .cards {
+            width: 100%;
+            height: auto;
+            /* background-color: #131A22; */
+            /* background-color: rgba(240, 225, 225, 0.5); Red with 50% opacity */
+            /* background-color: red(0 35%, 100% 36%, 100% 100%, 0% 100%);; */
+            z-index: 1;
+            margin-top: -45vh;
+            position: absolute;
+
+        }
+
+
+        .card-items {
+            width: 23.2%;
+            height: 57vh;
+            background-color: white;
+            margin-left: 30px;
+            margin-bottom: 19px;
+            /* margin-top: -45vh; */
+            padding: 15px;
+            box-shadow: 0px 2px 10px black;
+
+
+            /* border: 2px solid; */
+            /* border-bottom: 1px solid; */
+
+
+        }
+
+        .card-sub-item-title {
+            width: 100%;
+            height: 10vh;
+            text-align: left;
+            font-size: 22px;
+            padding-left: 10px;
+            padding-top: 5px;
+            /* background-color: red; */
+        }
+
+        .card-sub-item-product {
+            width: 100%;
+            height: 43vh;
+            /* padding: 15px; */
+            /* background-color: black; */
+        }
+
+        .prd-line {
+            width: 100%;
+            height: 40%;
+            margin-bottom: 15px;
+            /* background-color: red; */
+        }
+
+        .explore-items {
+            width: 100%;
+            height: 15%;
+            margin-top: -15px;
+            font-size: 15px;
+            padding-top: 13px;
+            padding-left: 10px;
+
+            a {
+                text-decoration: none;
+                color: rgb(73, 163, 193);
+            }
+
+            /* text-align: center; */
+            /* background-color: blue; */
+        }
+
+        .prd-line .prd1 {
+            /* background-color: gold; */
+            width: 48.5%;
+            height: 100%;
+            margin-right: 10px;
+            margin-left: 0px;
+        }
+
+        .prd-line .prd2 {
+            /* background-color: gold; */
+            width: 48.5%;
+            height: 100%;
+
+            margin-left: 0px;
+        }
+
+        .most-loved1 {
+            /* background-color: rgb(16, 53, 85); */
+            width: 100%;
+            height: 50%;
+
+            .m-one {
+                /* background-color: white; */
+                width: 52%;
+                height: 100%;
+                margin-left: 0%;
+
+                img {
+                    width: 160px;
+                    height: 160px;
+                }
+            }
+
+            .m-two {
+                /* background-color: black; */
+                width: 52.2%;
+                height: 95%;
+                margin-left: 1px;
+
+                img {
+                    width: 170px;
+                    height: 160px;
+                }
+
+            }
+
+        }
+        
+
+        .most-loved2 {
+            /* background-color: rgb(16, 53, 85); */
+            width: 100%;
+            height: 50%;
+
+            .m-one {
+                /* background-color: black; */
+                width: 52%;
+                height: 100%;
+                margin-left: 0%;
+
+                img {
+                    width: 160px;
+                    height: 160px;
+                }
+            }
+
+            .m-two {
+                /* background-color: white; */
+                width: 52.2%;
+                height: 100%;
+                margin-left: 1px;
+
+                img {
+                    width: 170px;
+                    height: 160px;
+                }
+            }
+        }
+
+        .prd-name {
+            width: 100%;
+            height: 75%;
+
+            /* background-color: blue; */
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .prd-title {
+            width: 100%;
+            height: 25%;
+            /* background-color: rgb(17, 0, 255); */
+            font-size: 12px;
+            text-align: left;
+
+        }
+
+
+        .break {
+            width: 100%;
+            height: 75vh;
+            background-color: rgb(229, 247, 247);
+        }
+
+        .line3 {
+            width: 100%;
+            height: 88vh;
+            background-color: rgb(229, 247, 247);
+            padding: 27px;
+            padding-bottom: 0px;
+            padding-top: 0px;
+        }
+        .line4{
+            width: 100%;
+            height: 450px;
+            background-color: rgb(229, 247, 247);
+            padding: 27px;
+            padding-bottom: 0px;
+            padding-top: 0px;
+
+
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            gap: 5px;
+            /* div{
+                background-color: lightblue;
+            } */
+            
+        }
+        
+
+        .hr-items {
+            width: 99.2%;
+            height: 45%;
+            background-color: white;
+            margin-bottom: 20px;
+            margin-left: 5px;
+            padding-left: 35px;
+            padding-top: 18px;
+        }
+
+        .hr-item-title {
+            width: 97.5%;
+            height: 15%;
+            margin-left: 0px;
+            padding-left: 20px;
+            font-size: 24px;
+            /* background-color: blue; */
+        }
+
+        .hr-see-offer {
+            font-size: large;
+            margin-left: 60px;
+            margin-top: 6px;
+            color: rgb(73, 163, 193);
+
+        }
+
+        
+
+        .flex-p{
+            width: 170px;
+            height: 220px;
+            background-color: #131A22;
+            /* margin-right: 5px; */
+            /* float: left; */
+            /* box-sizing: border-box; */
+            
+        }
+        .hr-item-products{
+            display: grid;
+            gap: 1px;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            overflow-x: scroll;
+            scrollbar-width: none;
+            
+        }
+        .hr-item-products:hover{
+            scrollbar-width: thin;
+            scrollbar-track-color: #131A22;
+        }
+
+        .cards img:hover{
+            scale: 1.3;
+            
+        }
+
+        option{
+            /* width: 100px; */
+            height: 10px;
+            background-color: aqua;
+            text-align: left;
+            padding-left: 5px;
+        }
+
+        /* line 4 css COde start*/
+        .p1{
+            display: block;
+
+        }
+        .p2{
+            display: none;
+            
+        }
+        .p3{
+            display: none;
+        }
+        .p4{
+            display: none;
+        }
+        .test {
+            width: 350px;
+            height: 95%;
+            background-color: white;
+            padding: 15px;
+            display: grid;
+            gap: 5px;
+            grid-template-rows: 9% 60% 20% 0%;
+
+            div img {
+                width: 230px;
+                margin-left: 18%;
+            }
+
+            span {
+                opacity: 0.6;
+            }
+
+            b {
+                font-size: 22px;
+            }
+
+            .mul-img{
+                float: left;
+                width: 20%;
+                height: 80%;
+                margin-right: 5px;
+                /* border: 1px solid black; */
+                
+                border-radius: 10px;
+                img{
+                    width: 90%;
+                    /* margin-left: 3px;
+                    margin-top: 3px; */
+                    margin: 3px;
+                    height: 90%;
+                    border-radius: 10px;
+                }
+            }
+        }
+        .test2{
+            img{
+                height: 150px;
+            }
+            div{
+                font-size: 15px;
+            }
+        }
+        .border{
+            border: 2px solid rgb(77, 48, 48);
+        }
+        .mul{
+            border: none;
+        }
+        /* line 4 css code end */
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div>
+            <div class="main-nav">
+                <div class="row first">
+                    <div class="logo row">
+                        <img src="images/logo-removebg-preview.png" alt="">
+                    </div>
+                    <div class="location row">
+                        <div class="row location-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="row address">
+                            <div class="current-address">Delivering to Pune 411105</div>
+                            <div><strong>Update location</strong></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row second">
+                    <div class="row category">
+                        <select name="" id="">
+                            <option value="">All</option>
+                            <option value="">All Categories</option>
+                            <option value="">Alexa Skills</option>
+                            <option value="">Amazon Devices</option>
+                            <option value="">Amazon Fashion</option>
+                            <option value="">Amazon Fresh</option>
+                        </select>
+                    </div>
+                    <div class="row search-bar">
+                        <input type="text" placeholder="Search Amazon.in">
+                    </div>
+                    <div class="row search-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+                <div class="row third">
+                    <div class="row language">
+                        <img src="images/square.png" alt="" class="row">
+                        <div class="row">
+                            <select name="" id="">
+                                <option value="">EN English</option>
+                                <option value="">MA Marathi</option>
+                                <option value="">HI Hindi</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row account">
+                        <div id="name">Hello, Sign in</div>
+                        <div id="ac-list"><strong>Account & Lists</strong></div>
+                    </div>
+                    <div class="row orders">
+                        <div id="name">Return</div>
+                        <div id="ac-list"><strong>& Orders</strong></div>
+                    </div>
+                    <div class="row cart">
+                        <div class="row"><i class="fa-solid fa-cart-shopping"></i></div>
+                        <div class="row" id="cart">Cart</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sub NAV Bar Start -->
+
+        <div>
+            <div class="sub-nav">
+
+                <li><i class="fa-solid fa-bars"></i> &nbsp;All</li>
+                <li>Fresh</li>
+                <li>MX Player</li>
+                <li>Sell</li>
+                <li>Best Sellers</li>
+                <li>Today's Deals</li>
+                <li>Mobiles</li>
+                <li>Customer Service</li>
+                <li>Prime</li>
+                <li>Electronics</li>
+                <li>Home & Kitchen</li>
+                <li>Amazon Pay</li>
+                <li>New Releases</li>
+                <li>Fashion</li>
+                <li>Car & Motorbike</li>
+                <li>Computers</li>
+
+            </div>
+        </div>
+
+        <!-- sub NAV BAr END -->
+    </div>
+
+    <!-- Slider Start  -->
+
+    <div class="back" style="background-color: #cb862b;">
+        <div class="container">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <!-- <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol> -->
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="images/slideimage1.jpg" alt="Los Angeles" style="width:100%;">
+                    </div>
+
+                    <div class="item">
+                        <img src="images/slideimage2.jpg" alt="Chicago" style="width:100%;">
+                    </div>
+
+                    <div class="item">
+                        <img src="images/slideimage3.jpg" alt="New york" style="width:100%;">
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="cards">
+
+            <div class="line1">
+                <div class="row card-items">
+                    <div class="card-sub-item-title">
+                        <strong>Customers' Most-Loved Products for you</strong>
+                    </div>
+                    <div class="card-sub-item-product most-loved-one">
+                        <div class="most-loved1">
+                            <div class="row m-one" style="overflow: hidden;">
+                                <img src="images/most1.png" alt="">
+                            </div>
+                            <div class="row m-two" style="overflow: hidden;">
+                                <img src="images/most2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="most-loved2">
+                            <div class="row m-one" style="overflow: hidden;">
+                                <img src="images/most3.png" alt="">
+                            </div>
+                            <div class="row m-two" style="overflow: hidden;">
+                                <img src="images/most4.png" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row card-items">
+                    <div class="card-sub-item-title">
+                        <strong>Revamp your home in style</strong>
+                    </div>
+                    <div class="card-sub-item-product">
+                        <div class="prd-line">
+                            <div class="row prd1">
+                                <div class="prd-name" style="overflow: hidden;">
+                                    <img src="images/pic1.png" alt="">
+                                </div>
+                                <div class="prd-title">
+                                    Cushion covers, bedsheets & more
+                                </div>
+                            </div>
+                            <div class="row prd2">
+                                <div class="prd-name" style="overflow: hidden;">
+                                    <img src="images/pic2.png" alt="">
+                                </div>
+                                <div class="prd-title">
+                                    Figurines, vases & more
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prd-line">
+                            <div class="row prd1">
+                                <div class="prd-name" style="overflow: hidden;">
+                                    <img src="images/pic3.png" alt="">
+                                </div>
+                                <div class="prd-title">
+                                    Home storage
+                                </div>
+                            </div>
+                            <div class="row prd2">
+                                <div class="prd-name" style="overflow: hidden;">
+                                    <img src="images/pic4.png" alt="">
+                                </div>
+                                <div class="prd-title">
+                                    Lighting solutions
+                                </div>
+                            </div>
+                        </div>
+                        <div class="explore-items">
+                            <a href="#"><strong>Explore all</strong></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row card-items">
+                    <div class="card-sub-item-title">
+                        <strong>Explore more from Small Business</strong>
+                    </div>
+                    <div class="card-sub-item-product">
+                        <div class="prd-line">
+                            <div class="row prd1">
+                                <div class="prd-name" style="overflow: hidden;">
+                                    <img src="images/pic5.png" alt="">
+                                </div>
+                                <div class="prd-title">
+                                    Ethnic, dresses & more
+                                </div>
+                            </div>
+                            <div class="row prd2">
+                                <div class="prd-name" style="overflow: hidden;">
+                                    <img src="images/pic6.png" alt="">
+                                </div>
+                                <div class="prd-title">
+                                    Decor
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prd-line">
+                            <div class="row prd1">
+                                <div class="prd-name" style="overflow: hidden;">
+                                    <img src="images/pic7.png" alt="">
+                                </div>
+                                <div class="prd-title">
+                                    Fashion accessories
+                                </div>
+                            </div>
+                            <div class="row prd2">
+                                <div class="prd-name" style="overflow: hidden;">
+                                    <img src="images/pic8.png" alt="">
+                                </div>
+                                <div class="prd-title">
+                                    Glassware & drinkware
+                                </div>
+                            </div>
+                        </div>
+                        <div class="explore-items">
+                            <a href="#"><strong>Explore all</strong></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row card-items">
+                    <div class="card-sub-item-title">
+                        <strong>Starting ₹199 | Headphones</strong>
+                    </div>
+                    <div class="card-sub-item-product">
+                        <div class="prd-line">
+                            <div class="row prd1">
+                                <div class="prd-name" style="overflow: hidden;">
+                                    <img src="images/pic9.png" alt="">
+                                </div>
+                                <div class="prd-title">
+                                    Starting ₹249 | boAt
+                                </div>
+                            </div>
+                            <div class="row prd2">
+                                <div class="prd-name" style="overflow: hidden;">
+                                    <img src="images/pic10.png" alt="">
+                                </div>
+                                <div class="prd-title">
+                                    Starting ₹349 | boult
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prd-line">
+                            <div class="row prd1">
+                                <div class="prd-name" style="overflow: hidden;">
+                                    <img src="images/pic11.png" alt="">
+                                </div>
+                                <div class="prd-title">
+                                    Starting ₹649 | Noise
+                                </div>
+                            </div>
+                            <div class="row prd2">
+                                <div class="prd-name" style="overflow: hidden;">
+                                    <img src="images/pic12.png" alt="">
+                                </div>
+                                <div class="prd-title">
+                                    Starting ₹149 | Zebronics
+                                </div>
+                            </div>
+                        </div>
+                        <div class="explore-items">
+                            <a href="#"><strong>See all offers</strong></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="line2">
+                <div class="row card-items">
+                    <div class="card-sub-item-title">
+                        <strong>Appliances for your home | Up to 55% off</strong>
+                    </div>
+                    <div class="card-sub-item-product">
+                        <div class="prd-line">
+                            <div class="row prd1">
+                                <div class="prd-name" style="overflow: hidden;">
+                                    <img src="images/pic13.png" alt="">
+                                </div>
+                                <div class="prd-title">
+                                    Air conditioners
+                                </div>
+                            </div>
+                            <div class="row prd2">
+                                <div class="prd-name" style="overflow: hidden;">
+                                    <img src="images/pic14.png" alt="">
+                                </div>
+                                <div class="prd-title">
+                                    Refrigerators
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prd-line">
+                            <div class="row prd1">
+                                <div class="prd-name" style="overflow: hidden;">
+                                    <img src="images/pic15.png" alt="">
+                                </div>
+                                <div class="prd-title">
+                                    Microwaves
+                                </div>
+                            </div>
+                            <div class="row prd2">
+                                <div class="prd-name" style="overflow: hidden;">
+                                    <img src="images/pic16.png" alt="">
+                                </div>
+                                <div class="prd-title">
+                                    Washing machines
+                                </div>
+                            </div>
+                        </div>
+                        <div class="explore-items">
+                            <a href="#"><strong>See more</strong></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row card-items">
+                    <div class="card-sub-item-title">
+                        <strong>Automotive essentials | Up to 60% off</strong>
+                    </div>
+                    <div class="card-sub-item-product">
+                        <div class="prd-line">
+                            <div class="row prd1">
+                                <div class="prd-name" style="overflow: hidden;">
+                                    <img src="images/pic17.png" alt="">
+                                </div>
+                                <div class="prd-title">
+                                    Cleaning accessories
+                                </div>
+                            </div>
+                            <div class="row prd2">
+                                <div class="prd-name" style="overflow: hidden;">
+                                    <img src="images/pic18.png" alt="">
+                                </div>
+                                <div class="prd-title">
+                                    Tyre & rim care
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prd-line">
+                            <div class="row prd1">
+                                <div class="prd-name" style="overflow: hidden;">
+                                    <img src="images/pic19.png" alt="">
+                                </div>
+                                <div class="prd-title">
+                                    Helmets
+                                </div>
+                            </div>
+                            <div class="row prd2">
+                                <div class="prd-name" style="overflow: hidden;">
+                                    <img src="images/pic20.png" alt="">
+                                </div>
+                                <div class="prd-title">
+                                    Vacuum cleaner
+                                </div>
+                            </div>
+                        </div>
+                        <div class="explore-items">
+                            <a href="#"><strong>See more</strong></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row card-items">
+                    <div class="card-sub-item-title">
+                        <strong>Min. 40% off | Gifting toys for little ones | Amazon brands</strong>
+                    </div>
+                    <div class="card-sub-item-product">
+                        <div class="prd-line">
+                            <div class="row prd1">
+                                <div class="prd-name" style="overflow: hidden;">
+                                    <img src="images/pic21.png" alt="">
+                                </div>
+                                <div class="prd-title">
+                                    Min. 40% off | soft toys
+                                </div>
+                            </div>
+                            <div class="row prd2">
+                                <div class="prd-name" style="overflow: hidden;">
+                                    <img src="images/pic22.png" alt="">
+                                </div>
+                                <div class="prd-title">
+                                    Min. 40% off | Indoor games
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prd-line">
+                            <div class="row prd1">
+                                <div class="prd-name" style="overflow: hidden;">
+                                    <img src="images/pic23.png" alt="">
+                                </div>
+                                <div class="prd-title">
+                                    Min. 40% off | Ride ons
+                                </div>
+                            </div>
+                            <div class="row prd2">
+                                <div class="prd-name" style="overflow: hidden;">
+                                    <img src="images/pic24.png" alt="">
+                                </div>
+                                <div class="prd-title">
+                                    Min. 40% off | outdoor games
+                                </div>
+                            </div>
+                        </div>
+                        <div class="explore-items">
+                            <a href="#"><strong>See all offers</strong></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row card-items">
+                    <div class="card-sub-item-title">
+                        <strong>Starting ₹199 | Amazon Brands & more</strong>
+                    </div>
+                    <div class="card-sub-item-product">
+                        <div class="prd-line">
+                            <div class="row prd1">
+                                <div class="prd-name" style="overflow: hidden;">
+                                    <img src="images/pic25.png" alt="">
+                                </div>
+                                <div class="prd-title">
+                                    Starting ₹199 | Bedsheets
+                                </div>
+                            </div>
+                            <div class="row prd2">
+                                <div class="prd-name" style="overflow: hidden;">
+                                    <img src="images/pic26.png" alt="">
+                                </div>
+                                <div class="prd-title">
+                                    Starting ₹199 | Curtains
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prd-line">
+                            <div class="row prd1">
+                                <div class="prd-name" style="overflow: hidden;">
+                                    <img src="images/pic27.png" alt="">
+                                </div>
+                                <div class="prd-title">
+                                    Minimum 40% off | Ironing board & more
+                                </div>
+                            </div>
+                            <div class="row prd2">
+                                <div class="prd-name" style="overflow: hidden;">
+                                    <img src="images/pic28.png" alt="">
+                                </div>
+                                <div class="prd-title">
+                                    Up to 60% off | Home decor
+                                </div>
+                            </div>
+                        </div>
+                        <div class="explore-items">
+                            <a href="#"><strong>See more</strong></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="break"></div>
+
+        <div class="line3">
+            <div class="hr-items">
+                <div class="hr-item-title">
+                    <div class="row"><strong>Up to 50% | Beauty and personal care from Emerging businesses</strong>
+                    </div>
+                    <div class="row hr-see-offer"><a href="#">See all offers</a></div>
+                </div>
+                <div class="hr-item-products">
+                    <div class="flex-p">
+                        <img src="images/hr-pic1.png" alt="">
+                    </div>
+                    <div class="flex-p">
+                        <img src="images/hr-pic2.png" alt="">
+                    </div>
+                    <div class="flex-p">
+                        <img src="images/hr-pic3.png" alt="">
+                    </div>
+                    <div class="flex-p">
+                        <img src="images/hr-pic4.png" alt="">
+                    </div>
+                    <div class="flex-p">
+                        <img src="images/hr-pic5.png" alt="">
+                    </div>
+                    <div class="flex-p">
+                        <img src="images/hr-pic5.png" alt="">
+
+                    </div>
+                    <div class="flex-p">
+                        <img src="images/hr-pic4.png" alt="">
+
+                    </div>
+                    <div class="flex-p">
+                        <img src="images/hr-pic3.png" alt="">
+
+                    </div>
+                    <div class="flex-p">
+                        <img src="images/hr-pic2.png" alt="">
+
+                    </div>
+                    <div class="flex-p">
+                        <img src="images/hr-pic2.png" alt="">
+
+                    </div>
+                </div>
+            </div>
+            <div class="hr-items">
+                <div class="hr-item-title">
+                    <div class="row"><strong>Up to 50% | Beauty and personal care from Emerging businesses</strong>
+                    </div>
+                    <div class="row hr-see-offer"><a href="#">See all offers</a></div>
+                </div>
+                <div class="hr-item-products">
+                    <div class="flex-p"></div>
+                    <div class="flex-p"></div>
+                    <div class="flex-p"></div>
+                    <div class="flex-p"></div>
+                    <div class="flex-p"></div>
+                    <div class="flex-p"></div>
+                    <div class="flex-p"></div>
+                    <div class="flex-p"></div>
+                    <div class="flex-p"></div>
+                    <div class="flex-p"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="line4">
+            <div>
+                <div class="test">
+                    <div style="padding-top: 5px; font-size: 22px;">
+                        <strong>Keep shopping for</strong>
+                    </div>
+                    <div class="p1" id="p1">
+                        <div>
+                            <img src="images/mul-1.png" alt="">
+                        </div>
+                        <div>
+                            Craftribal Ceramic Beautiful The Bud Combo | Ceramic Flower Vase | Finish Matte, 6 Inches, 4 Inc…
+                        </div>
+                        <div>
+                            <b>₹ 949</b> &nbsp;
+                            <span>M.R.P: <strike>₹1,399.00</strike></span>
+                        </div>
+                    </div>
+                    <div class="p2 test2" id="p2">
+                        <div>
+                            <img src="images/mul-2.png" alt="">
+                        </div>
+                        <div class="mul-title">
+                            SATYAM KRAFT 3 Pcs Artificial Flowers Small Fake Flower Faux Pampas Fluffy for Home Decoration,…
+                        </div>
+                        <div>
+                            <b>₹ 389</b> &nbsp;
+                            <span>M.R.P: <strike>₹1,200.00</strike></span>
+                        </div>
+                    </div>
+                    <div class="p3 test2" id="p3">
+                        <div>
+                            <img src="images/mul-3.png" alt="">
+                        </div>
+                        <div>
+                            Kawai Homes Face Vase Cute Abstract Queen White Aesthetic Resin Ceramic Finish Flower Vase for Ho…
+                        </div>
+                        <div>
+                            <b>₹ 999</b> &nbsp;
+                            <span>M.R.P: <strike>₹2,499.00</strike></span>
+                        </div>
+                    </div>
+                    <div class="p4 test2" id="p4">
+                        <div>
+                            <img src="images/mul-4.png" alt="">
+                        </div>
+                        <div>
+                            Flowers and Fillers | Boho Latte Bunch | Pampas Grass | Eco-Friendly Flowers for Home, Office, Bed…
+                        </div>
+                        <div>
+                            <b>₹ 699</b> &nbsp;
+                            
+                        </div>
+                    </div>
+                    <div style="padding-left: 10px; padding-top: 3px;">
+                        <div class="mul-img border" id="mul1" onclick="display('p1')"> <img src="images/mul-img1.png" alt=""></div>
+                        <div class="mul-img mul" id="mul2" onclick="display('p2')"> <img src="images/mul-img2.png" alt=""></div>
+                        <div class="mul-img mul" id="mul3" onclick="display('p3')"><img src="images/mul-img3.png" alt=""></div>
+                        <div class="mul-img mul" id="mul4" onclick="display('p4')"><img src="images/mul-img4.png" alt=""></div>
+                    </div>
+                    <div style="padding-top: 10px;"> 
+                        <a href="#" style="text-decoration: none; color: rgb(8, 144, 190); ">See more</a>
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+            <div></div>
+            <div></div>
+        </div>
+
+
+
+    </div>
+
+    <!-- Slider End -->
+
+
+
+
+</body>
+<script>
+
+    function display(str){
+        
+        if(str == "p1"){
+            document.getElementById('p1').style.display = "block";
+            document.getElementById('p2').style.display = "none";
+            document.getElementById('p3').style.display = "none";
+            document.getElementById('p4').style.display = "none";
+            document.getElementById('mul1').classList.replace("mul","border");
+            document.getElementById('mul2').classList.replace("border","mul");
+            document.getElementById('mul3').classList.replace("border","mul");
+            document.getElementById('mul4').classList.replace("border","mul");
+            console.log("done");
+        }
+        if(str == "p2"){
+            document.getElementById('p1').style.display = "none";
+            document.getElementById('p2').style.display = "block";
+            document.getElementById('p3').style.display = "none";
+            document.getElementById('p4').style.display = "none";
+            document.getElementById('mul1').classList.replace("border","mul");
+            document.getElementById('mul2').classList.replace("mul","border");
+            document.getElementById('mul3').classList.replace("border","mul");
+            document.getElementById('mul4').classList.replace("border","mul");
+            console.log("done");
+        }
+        if(str == "p3"){
+            document.getElementById('p1').style.display = "none";
+            document.getElementById('p2').style.display = "none";
+            document.getElementById('p3').style.display = "block";
+            document.getElementById('p4').style.display = "none";
+            document.getElementById('mul1').classList.replace("border","mul");
+            document.getElementById('mul2').classList.replace("border","mul");
+            document.getElementById('mul3').classList.replace("mul","border");
+            document.getElementById('mul4').classList.replace("border","mul");
+            console.log("done");
+        }
+        if(str == "p4"){
+            document.getElementById('p1').style.display = "none";
+            document.getElementById('p2').style.display = "none";
+            document.getElementById('p3').style.display = "none";
+            document.getElementById('p4').style.display = "block";
+            document.getElementById('mul1').classList.replace("border","mul");
+            document.getElementById('mul2').classList.replace("border","mul");
+            document.getElementById('mul3').classList.replace("border","mul");
+            document.getElementById('mul4').classList.replace("mul","border");
+            console.log("done");
+        }
+
+    }
+</script>
+</html>
